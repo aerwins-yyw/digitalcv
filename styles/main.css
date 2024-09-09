@@ -1,0 +1,101 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Readex Pro';
+}
+
+a {
+    text-decoration: none;
+    color: white !important;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #d33682 !important;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+hr {
+    margin-top: 0px;
+    margin-bottom: 5%;
+}
+
+/* Hide Streamlit default menu, footer, and header */
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+/* Custom styling for title and subheader */
+.main-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.sub-title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.email {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.download-btn {
+    margin-top: 15px;
+}
+
+/* Custom small-text class for contacts */
+.small-text {
+    font-size: 20px;
+}
+
+/* Social Media Icon Styling */
+.social-icon {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Add responsiveness for mobile devices */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 30px;
+    }
+
+    .sub-title {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .small-text {
+        font-size: 12px;
+    }
+
+    .social-icon {
+        width: 18px;
+    }
+}
