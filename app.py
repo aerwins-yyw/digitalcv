@@ -144,37 +144,87 @@ st.subheader("Work History")
 st.write("---")
 
 # --- JOB 1
-st.write("🚧", "**Senior Data Analyst | Ross Industries**")
-st.write("02/2020 - Present")
+# (add logo Here)
+st.write("🚧", "**Data Analyst and Illutrator | KOMPAS Research & Development**")
+st.write("03/2020 - Present")
 st.write("""
-- ► Used PowerBI and SQL to redefine and track KPIs surrounding marketing initiatives, and supplied recommendations to boost landing page conversion rate by 38%
-- ► Led a team of 4 analysts to brainstorm potential marketing and sales improvements, and implemented A/B tests to generate 15% more client leads
-- ► Redesigned data model through iterations that improved predictions by 12%
+- ► Doing research on various fields, particularly Indonesia's industrial upstreaming policy, energy transition, AI and Big Data regulation. 
+- ► Regular writer to Kompaspedia platform
+- ► Research Report Illustrator
 """)
 
 # --- JOB 2
 st.write('\n')
-st.write("🚧", "**Data Analyst | Liberty Mutual Insurance**")
-st.write("01/2018 - 02/2022")
+st.write("🚧", "**Consultant | Coordinating Ministry for Maritime Affairs and Investment, Republic of Indonesia**")
+st.write("08/2021 - 09/2022")
 st.write("""
-- ► Built data models and maps to generate meaningful insights from customer data, boosting successful sales efforts by 12%
-- ► Modeled targets likely to renew, and presented analysis to leadership, which led to a YoY revenue increase of $300K
-- ► Compiled, studied, and inferred large amounts of data, modeling information to drive auto policy pricing
+- ► Consultant for Secretariate of High-level Dialogue and Cooperation Mechanism between Republic of Indonesia and People's Republic of China
+- ► Coordinating inter-ministerial works and bilateral meetings, supervising investment projects, and hosting business matching forums and focus group discussions
+- ► Chinese interpreter and documents translations
 """)
 
 # --- JOB 3
 st.write('\n')
-st.write("🚧", "**Data Analyst | Chegg**")
-st.write("04/2015 - 01/2018")
+st.write("🚧", "**Teacher | Xavier High School, Federated States of Micronesia**")
+st.write("08/2019 - 03/2020")
 st.write("""
-- ► Devised KPIs using SQL across company website in collaboration with cross-functional teams to achieve a 120% jump in organic traffic
-- ► Analyzed, documented, and reported user survey results to improve customer communication processes by 18%
-- ► Collaborated with analyst team to oversee end-to-end process surrounding customers' return data
+- ► Teaching Ethics, Latin Language, French A1 and Chinese HSK 1-2
+- ► Coordinating campus ministry and social service programs
+""")
+
+# --- EDUCATION & PROFESSIONAL TRAINING ---
+st.write('\n')
+st.subheader("Education & Professional Training")
+st.write("---")
+
+# Education Section
+st.write("🎓", "**Master of Public Administration**")
+st.write("Tsinghua University, Beijing, China | 2022 - Present")
+st.write("""
+- ► Focus Areas: Data Science, Policy Analysis, AI in Business Strategy
+- ► Thesis: Impact of ASEAN-Smart City Network on Urban Developments 
+""")
+
+st.write('\n')
+st.write("🎓", "**Bachelor of Arts**")
+st.write("Driyarkara School of Philosophy, Jakarta, Indonesia | 2015 - 2019")
+st.write("""
+- ► Major: Philosophy
+- ► Thesis: Struggle for Recognition - Axel Honnet's Critical Theory
+- ► Extracurricular: Driyarkara Journal Coordinator in Chief & Head of Editors 2016-2017; MaGis Community Coordinator 2016-2018
+""")
+
+# Professional Training Section
+st.write('\n')
+st.subheader("Professional Training & Certifications")
+st.write("""
+- 🏅 **Certified Data Scientist (CDS)** – DataCamp | 2021
+- 🏅 **Advanced AI & Machine Learning for Business** – Coursera | 2020
+- 🏅 **Public Policy Design and Analysis** – HarvardX | 2019
 """)
 
 # --- PROJECTS & ACCOMPLISHMENTS ---
 st.write('\n')
 st.subheader("Projects & Accomplishments")
 st.write("---")
+PROJECTS = {
+    "Smart City Research": "https://example.com",
+    "AI Policy Analysis": "https://example.com"
+}
+
 for project, link in PROJECTS.items():
     st.write(f"[{project}]({link})")
+
+# --- ARTICLES & PUBLICATIONS ---
+st.write('\n')
+st.subheader("Articles & Publications")
+st.write("---")
+
+ARTICLES = {
+    "The Future of Smart Cities: Harnessing AI for Public Policy": "https://example.com/article1",
+    "Data-Driven Decision Making in the Public Sector": "https://example.com/article2",
+    "The Impact of AI on Science-Technology Innovation Policy": "https://example.com/article3"
+}
+
+for article, link in ARTICLES.items():
+    st.write(f"[{article}]({link})")
