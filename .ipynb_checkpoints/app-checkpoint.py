@@ -55,9 +55,41 @@ with col1:
     st.image(profile_pic, width=230, use_column_width=False, output_format="auto")
 
 with col2:
+    st.markdown(
+        """
+        <style>
+        .main-title {
+            font-size: 36px; /* Adjust font size as needed */
+            white-space: nowrap; /* Prevent wrapping */
+            text-align: center; /* Center the text */
+        }
+        .sub-title {
+            font-size: 24px; /* Adjust the subtitle font size */
+            white-space: nowrap; /* Prevent wrapping */
+            text-align: center; /* Center the text */
+        }
+        .description {
+            font-size: 18px; /* Adjust the description font size */
+            text-align: left; /* Center the text */
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+    
     st.markdown(f"<h1 class='main-title'>{NAME}</h1>", unsafe_allow_html=True)
     st.markdown(f"<h2 class='sub-title'>{姓名}</h2>", unsafe_allow_html=True)
     st.markdown(f"<p class='description'>{DESCRIPTION}</p>", unsafe_allow_html=True)
+# Three Main Principles in Professional Life
+st.write('\n')
+st.markdown(
+    """
+    <div style="text-align: left; margin-top: -10px; margin-bottom: 20px;">
+        <em>Sincerity, Grit, Innovation</em><br>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # Download Resume Button
 st.download_button(
@@ -87,25 +119,41 @@ st.markdown(f"""
     </p>
     """, unsafe_allow_html=True)
 
-# --- SOCIAL MEDIA LINKS WITH ICONS ---
-SOCIAL_MEDIA_ICONS = {
-    "LinkedIn": r"C:/Users/HP/Documents/Digital CV/assets/LinkedIn Logo.webp",
-    "GitHub": r"C:/Users/HP/Documents/Digital CV/assets/GitHub Logo.png",
-    "Instagram": r"C:/Users/HP/Documents/Digital CV/assets/Instagram Logo.webp",
-    "X": r"C:/Users/HP/Documents/Digital CV/assets/X Logo.jpg"
-}
+import base64
 
-# Display social media links with icons
-cols = st.columns(len(SOCIAL_MEDIA))
+def img_to_base64(file_path):
+    with open(file_path, "rb") as img_file:
+        return base64.b64encode(img_file.read()).decode('utf-8')
 
-for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
-    icon_url = SOCIAL_MEDIA_ICONS[platform]
-    cols[index].markdown(f"""
-        <a href="{link}" target="_blank">
-            <img src="{icon_url}" class="social-icon"/> {platform}
+linkedin_img_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/LinkedIn Logo.webp")
+github_img_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/GitHub Logo.png")
+instagram_img_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/Instagram Logo.png")
+x_img_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/X Logo.jpg")
+
+# Use base64 encoded images in the HTML
+st.markdown(
+    f"""
+    <div style="display: flex; justify-content: space-evenly; align-items: center;">
+        <a href="https://www.linkedin.com/in/albertus-erwin-s/" target="_blank" style="text-decoration: none;">
+            <img src="data:image/webp;base64,{linkedin_img_base64}" width="20" style="vertical-align:middle; margin-right: 10px;">
+            LinkedIn
         </a>
-        """, unsafe_allow_html=True)
-
+        <a href="https://github.com/aerwins-yyw" target="_blank" style="text-decoration: none; margin-left: 20px;">
+            <img src="data:image/png;base64,{github_img_base64}" width="20" style="vertical-align:middle; margin-right: 10px;">
+            GitHub
+        </a>
+        <a href="https://www.instagram.com/aubert_erwin/" target="_blank" style="text-decoration: none; margin-left: 20px;">
+            <img src="data:image/webp;base64,{instagram_img_base64}" width="20" style="vertical-align:middle; margin-right: 10px;">
+            Instagram
+        </a>
+        <a href="https://x.com/A_Erwin_S" target="_blank" style="text-decoration: none; margin-left: 20px;">
+            <img src="data:image/jpg;base64,{x_img_base64}" width="20" style="vertical-align:middle; margin-right: 10px;">
+            X
+        </a>
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
 st.write('\n')
 
 # --- EXPERIENCE & QUALIFICATIONS ---
@@ -113,9 +161,10 @@ st.write('\n')
 st.subheader("Experience & Qualifications")
 st.write("""
 - ✔️ 3 Years of Working Experience in Education, Research, and Government Relations
-- ✔️ Well-trained in writing and public speaking, understanding of statistical principles and applications
+- ✔️ Well-trained in writing and public speaking 
+- ✔️ Understanding of statistical principles and applications
 - ✔️ Excellent team player and displaying a strong sense of initiative on tasks
-- ✔️ Life-long Learner, with focus area in Science-Technology Innovation Policy, Smart City, and AI. 
+- ✔️ Life-long Learner, with focus in public policy, data and AI, enterpreneurship 
 """)
 
 # --- SKILLS ---
@@ -128,14 +177,14 @@ st.write("""
 - 🗄️ Databases: MySQL, IBM DB2
 """)
 
-# --- lANGUAGE ---
+# --- LANGUAGE ---
 st.write('\n')
 st.subheader("Language Proficiency")
 st.write("""
-- 👩‍💻 Indonesian: Native
-- 📊 English: Fluent (IELTS Band 8, TOEFL IBT 104/120)
-- 📚 Chinese: Advance (HSK 6)
-- 🗄️ French: Intermediate (DELF B2)
+- 🇮🇩 Indonesian: Native
+- 🇬🇧 English: Fluent (IELTS Band 8, TOEFL IBT 104/120)
+- 🇨🇳 Chinese: Advance (HSK 6)
+- 🇫🇷 French: Intermediate (DELF B2)
 """)
 
 # --- WORK HISTORY ---
@@ -143,38 +192,128 @@ st.write('\n')
 st.subheader("Work History")
 st.write("---")
 
-# --- JOB 1
-st.write("🚧", "**Senior Data Analyst | Ross Industries**")
-st.write("02/2020 - Present")
+# --- JOB 1 ---
+kompas_logo_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/Litbang Kompas Logo.png")
+
+# Display the logo with base64 and the text using st.write()
+st.markdown(f"""
+    <div style="text-align: left; margin-bottom: 20px;">
+        <img src="data:image/png;base64,{kompas_logo_base64}" style="width:200px;">
+    </div>
+""", unsafe_allow_html=True)
+
+st.write("💡", "**Assistant Researcher, Data Analyst, Illustrator | KOMPAS Research & Development**")
+st.write("03/2020 - Present")
 st.write("""
-- ► Used PowerBI and SQL to redefine and track KPIs surrounding marketing initiatives, and supplied recommendations to boost landing page conversion rate by 38%
-- ► Led a team of 4 analysts to brainstorm potential marketing and sales improvements, and implemented A/B tests to generate 15% more client leads
-- ► Redesigned data model through iterations that improved predictions by 12%
+- ► Doing research on various fields, particularly Indonesia's industrial upstreaming policy, energy transition, AI and Big Data regulation. 
+- ► Regular writer to Kompaspedia platform
+- ► Research Report Illustrator
+""")
+st.write('\n')
+
+# --- JOB 2 ---
+kemenko_logo_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/Kemenko Marves Logo.png")
+hdcm_logo_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/hdcm Logo.png")
+
+# Display both logos side by side using base64
+st.markdown(f"""
+    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+        <img src="data:image/png;base64,{kemenko_logo_base64}" style="width:70px; margin-right: 10px;">
+        <img src="data:image/png;base64,{hdcm_logo_base64}" style="width:50px;">
+    </div>
+""", unsafe_allow_html=True)
+
+st.write("📊", "**Consultant | Coordinating Ministry for Maritime Affairs and Investment, Indonesia**")
+st.write("08/2021 - 09/2022")
+st.write("""
+- ► Consultant for Secretariat of High-level Dialogue and Cooperation Mechanism between Republic of Indonesia and People's Republic of China
+- ► Coordinating inter-ministerial works and bilateral meetings, supervising investment projects, and hosting business matching forums and focus group discussions
+- ► Chinese interpreter and document translations
+""")
+st.write('\n')
+
+# --- JOB 3 ---
+xavier_logo_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/Xavier High School Logo.png")
+
+st.markdown(f"""
+    <div style="text-align: left; margin-bottom: 20px;">
+        <img src="data:image/png;base64,{xavier_logo_base64}" style="width:50px;">
+    </div>
+""", unsafe_allow_html=True)
+
+st.write("🇫🇲", "**Teacher | Xavier High School, Federated States of Micronesia**")
+st.write("08/2019 - 03/2020")
+st.write("""
+- ► Teaching Ethics, Latin Language, French A1 and Chinese HSK 1-2
+- ► Coordinating campus ministry and social service programs
 """)
 
-# --- JOB 2
+# --- EDUCATION & PROFESSIONAL TRAINING ---
 st.write('\n')
-st.write("🚧", "**Data Analyst | Liberty Mutual Insurance**")
-st.write("01/2018 - 02/2022")
+st.subheader("Education & Professional Training")
+st.write("---")
+
+# Education Section
+st.write("🎓", "**Master of Public Administration**")
+st.write("Tsinghua University, Beijing, China | 2022 - Present")
 st.write("""
-- ► Built data models and maps to generate meaningful insights from customer data, boosting successful sales efforts by 12%
-- ► Modeled targets likely to renew, and presented analysis to leadership, which led to a YoY revenue increase of $300K
-- ► Compiled, studied, and inferred large amounts of data, modeling information to drive auto policy pricing
+- ► Focus Areas: Data Science, Policy Analysis, AI in Business Strategy
+- ► GPA: 3.91 (4.00)
+- ► Thesis: Impact of ASEAN-Smart City Network on Urban Developments 
 """)
 
-# --- JOB 3
 st.write('\n')
-st.write("🚧", "**Data Analyst | Chegg**")
-st.write("04/2015 - 01/2018")
+st.write("🎓", "**Bachelor of Engineering**")
+st.write("Universitas Yuppentek Indonesia | 2022 - Present")
 st.write("""
-- ► Devised KPIs using SQL across company website in collaboration with cross-functional teams to achieve a 120% jump in organic traffic
-- ► Analyzed, documented, and reported user survey results to improve customer communication processes by 18%
-- ► Collaborated with analyst team to oversee end-to-end process surrounding customers' return data
+- ► Major: Electrical Engineering
+- ► GPA: 4.00 (4.00)
+- ► Thesis: -
+""")
+
+st.write('\n')
+st.write("🎓", "**Bachelor of Arts**")
+st.write("Driyarkara School of Philosophy, Jakarta, Indonesia | 2015 - 2019")
+st.write("""
+- ► Major: Philosophy
+- ► GPA: 3.99 (4.00)
+- ► Thesis: Struggle for Recognition - Axel Honnet's Critical Theory
+- ► Driyarkara Journal Coordinator in Chief & Head of Editors 2016-2017; MaGis Community Coordinator 2016-2018; Hermanum College International Students Tutor
+""")
+
+# Professional Training Section
+st.write('\n')
+st.subheader("Professional Training & Certifications")
+st.write("""
+- 🏅 **Data Science with R Professional Certificate** – Harvard University
+- 🏅 **Data Science Professional Certificate** – IBM
+- 🏅 **Science and Technology Policy Course** – Massachusetts Institute of Technology
+- 🏅 **Project Management Professional Certificate** – University of Adelaide
+- 🏅 **French B2** - l’Institut Français d’Indonésie, Jakarta  
 """)
 
 # --- PROJECTS & ACCOMPLISHMENTS ---
 st.write('\n')
 st.subheader("Projects & Accomplishments")
 st.write("---")
+PROJECTS = {
+    "Smart City Research": "https://example.com",
+    "AI Policy Analysis": "https://example.com"
+}
+
 for project, link in PROJECTS.items():
     st.write(f"[{project}]({link})")
+
+# --- ARTICLES & PUBLICATIONS ---
+st.write('\n')
+st.subheader("Articles & Publications")
+st.write("---")
+
+ARTICLES = {
+    "The Future of Smart Cities: Harnessing AI for Public Policy": "https://example.com/article1",
+    "Data-Driven Decision Making in the Public Sector": "https://example.com/article2",
+    "The Impact of AI on Science-Technology Innovation Policy": "https://example.com/article3"
+}
+
+for article, link in ARTICLES.items():
+    st.write(f"[{article}]({link})")
