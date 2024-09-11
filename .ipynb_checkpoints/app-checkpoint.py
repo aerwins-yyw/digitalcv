@@ -2,12 +2,37 @@
 from pathlib import Path
 import streamlit as st
 from PIL import Image
+import base64
 
 # --- PATH SETTINGS ---
 current_dir = Path.cwd()
 css_file = current_dir / "styles" / "main.css"
 resume_file = current_dir / "assets" / "CV简历 - Albertus Erwin Susanto 阎余文 - EN中文.pdf"
 profile_pic = current_dir / "assets" / "Profile Picture.png"
+# Logos
+linkedin_logo = current_dir / "assets" / "LinkedIn Logo.png"
+github_logo = current_dir / "assets" / "GitHub Logo.png"
+instagram_logo = current_dir / "assets" / "Instagram Logo.png"
+x_logo = current_dir / "assets" / "X Logo.jpg"
+kompas_logo = current_dir / "assets" / "Litbang Kompas Logo.png"
+kemenko_logo = current_dir / "assets" / "Kemenko Marves Logo.png"
+hdcm_logo = current_dir / "assets" / "hdcm Logo.png"
+xavier_logo = current_dir / "assets" / "Xavier High School Logo.png"
+
+# Function to convert images to base64
+def img_to_base64(file_path):
+    with open(file_path, "rb") as img_file:
+        return base64.b64encode(img_file.read()).decode('utf-8')
+
+# Convert logos to base64
+linkedin_img_base64 = img_to_base64(linkedin_logo)
+github_img_base64 = img_to_base64(github_logo)
+instagram_img_base64 = img_to_base64(instagram_logo)
+x_img_base64 = img_to_base64(x_logo)
+kompas_logo_base64 = img_to_base64(kompas_logo)
+kemenko_logo_base64 = img_to_base64(kemenko_logo)
+hdcm_logo_base64 = img_to_base64(hdcm_logo)
+xavier_logo_base64 = img_to_base64(xavier_logo)
 
 # --- GENERAL SETTINGS ---
 PAGE_TITLE = "CURRICULUM VITAE"
@@ -100,7 +125,7 @@ st.download_button(
     mime="application/octet-stream",
 )
 
-# --- CONTACTS & SOCIAL MEDIA SECTION ---
+# --- CONTACTS SECTION ---
 st.markdown(f"""
     <style>
     .small-text {{
@@ -120,18 +145,7 @@ st.markdown(f"""
     </p>
     """, unsafe_allow_html=True)
 
-import base64
-
-def img_to_base64(file_path):
-    with open(file_path, "rb") as img_file:
-        return base64.b64encode(img_file.read()).decode('utf-8')
-
-linkedin_img_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/LinkedIn Logo.png")
-github_img_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/GitHub Logo.png")
-instagram_img_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/Instagram Logo.png")
-x_img_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/X Logo.jpg")
-
-# Use base64 encoded images in the HTML
+# --- SOCIAL MEDIA SECTION --- 
 st.markdown(
     f"""
     <div style="display: flex; justify-content: space-evenly; align-items: center;">
@@ -194,8 +208,6 @@ st.subheader("Work History")
 st.write("---")
 
 # --- JOB 1 ---
-kompas_logo_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/Litbang Kompas Logo.png")
-
 # Display the logo with base64 and the text using st.write()
 st.markdown(f"""
     <div style="text-align: left; margin-bottom: 20px;">
@@ -213,9 +225,6 @@ st.write("""
 st.write('\n')
 
 # --- JOB 2 ---
-kemenko_logo_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/Kemenko Marves Logo.png")
-hdcm_logo_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/hdcm Logo.png")
-
 # Display both logos side by side using base64
 st.markdown(f"""
     <div style="display: flex; align-items: center; margin-bottom: 20px;">
@@ -234,8 +243,7 @@ st.write("""
 st.write('\n')
 
 # --- JOB 3 ---
-xavier_logo_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/Xavier High School Logo.png")
-
+# Display both logos side by side using base64
 st.markdown(f"""
     <div style="text-align: left; margin-bottom: 20px;">
         <img src="data:image/png;base64,{xavier_logo_base64}" style="width:50px;">
