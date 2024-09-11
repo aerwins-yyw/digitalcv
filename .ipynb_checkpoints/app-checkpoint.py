@@ -80,6 +80,7 @@ with col2:
     st.markdown(f"<h1 class='main-title'>{NAME}</h1>", unsafe_allow_html=True)
     st.markdown(f"<h2 class='sub-title'>{姓名}</h2>", unsafe_allow_html=True)
     st.markdown(f"<p class='description'>{DESCRIPTION}</p>", unsafe_allow_html=True)
+
 # Three Main Principles in Professional Life
 st.write('\n')
 st.markdown(
@@ -125,7 +126,7 @@ def img_to_base64(file_path):
     with open(file_path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode('utf-8')
 
-linkedin_img_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/LinkedIn Logo.webp")
+linkedin_img_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/LinkedIn Logo.png")
 github_img_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/GitHub Logo.png")
 instagram_img_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/Instagram Logo.png")
 x_img_base64 = img_to_base64("C:/Users/HP/Documents/Digital CV/assets/X Logo.jpg")
