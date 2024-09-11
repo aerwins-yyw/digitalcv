@@ -16,7 +16,7 @@ instagram_logo = current_dir / "assets" / "Instagram Logo.png"
 x_logo = current_dir / "assets" / "X Logo.jpg"
 kompas_logo = current_dir / "assets" / "Litbang Kompas Logo.png"
 kemenko_logo = current_dir / "assets" / "Kemenko Marves Logo.png"
-hdcm_logo = current_dir / "assets" / "hdcm Logo.png"
+hdcm_logo = current_dir / "assets" / "hdcm logo.png"
 xavier_logo = current_dir / "assets" / "Xavier High School Logo.png"
 
 # Function to convert images to base64
