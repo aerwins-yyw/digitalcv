@@ -218,9 +218,9 @@ st.markdown(f"""
 st.write("💡", "**Assistant Researcher, Data Analyst, Illustrator | KOMPAS Research & Development**")
 st.write("03/2020 - Present")
 st.write("""
-- ► Doing research on various fields, particularly Indonesia's industrial upstreaming policy, energy transition, AI and Big Data regulation. 
-- ► Regular writer to Kompaspedia platform
-- ► Research Report Illustrator
+- ⁜ Doing research on various fields, particularly Indonesia's industrial upstreaming policy, energy transition, AI and Big Data regulation. 
+- ⁜ Regular writer to Kompaspedia platform
+- ⁜ Research report illustrator
 """)
 st.write('\n')
 
@@ -236,9 +236,9 @@ st.markdown(f"""
 st.write("📊", "**Consultant | Coordinating Ministry for Maritime Affairs and Investment, Indonesia**")
 st.write("08/2021 - 09/2022")
 st.write("""
-- ► Consultant for Secretariat of High-level Dialogue and Cooperation Mechanism between Republic of Indonesia and People's Republic of China
-- ► Coordinating inter-ministerial works and bilateral meetings, supervising investment projects, and hosting business matching forums and focus group discussions
-- ► Chinese interpreter and document translations
+- ⁜ Consultant for Secretariat of High-level Dialogue and Cooperation Mechanism between Republic of Indonesia and People's Republic of China
+- ⁜ Coordinating inter-ministerial works and bilateral meetings, supervising investment projects, and hosting business matching forums and focus group discussions
+- ⁜ Chinese interpreter and document translations
 """)
 st.write('\n')
 
@@ -253,8 +253,8 @@ st.markdown(f"""
 st.write("🇫🇲", "**Teacher | Xavier High School, Federated States of Micronesia**")
 st.write("08/2019 - 03/2020")
 st.write("""
-- ► Teaching Ethics, Latin Language, French A1 and Chinese HSK 1-2
-- ► Coordinating campus ministry and social service programs
+- ⁜ Teaching Ethics, Latin Language, French A1 and Chinese HSK 1-2
+- ⁜ Coordinating campus ministry and social service programs
 """)
 
 # --- EDUCATION & PROFESSIONAL TRAINING ---
@@ -266,39 +266,52 @@ st.write("---")
 st.write("🎓", "**Master of Public Administration**")
 st.write("Tsinghua University, Beijing, China | 2022 - Present")
 st.write("""
-- ► Focus Areas: Data Science, Policy Analysis, AI in Business Strategy
-- ► GPA: 3.91 (4.00)
-- ► Thesis: Impact of ASEAN-Smart City Network on Urban Developments 
+- ⁜ Focus Areas: Data Science, Policy Analysis, AI in Business Strategy
+- ⁜ GPA: 3.91 (4.00)
+- ⁜ Thesis: Impact of ASEAN-Smart City Network on Urban Developments
+- ⁜ Center for Science, Technology, and Education Policy Research Team Member
 """)
 
 st.write('\n')
 st.write("🎓", "**Bachelor of Engineering**")
 st.write("Universitas Yuppentek Indonesia | 2022 - Present")
 st.write("""
-- ► Major: Electrical Engineering
-- ► GPA: 4.00 (4.00)
-- ► Thesis: -
+- ⁜ Major: Electrical Engineering
+- ⁜ GPA: 4.00 (4.00)
+- ⁜ Thesis: -
 """)
 
 st.write('\n')
 st.write("🎓", "**Bachelor of Arts**")
 st.write("Driyarkara School of Philosophy, Jakarta, Indonesia | 2015 - 2019")
 st.write("""
-- ► Major: Philosophy
-- ► GPA: 3.99 (4.00)
-- ► Thesis: Struggle for Recognition - Axel Honnet's Critical Theory
-- ► Driyarkara Journal Coordinator in Chief & Head of Editors 2016-2017; MaGis Community Coordinator 2016-2018; Hermanum College International Students Tutor
+- ⁜ Major: Philosophy
+- ⁜ GPA: 3.99 (4.00)
+- ⁜ Thesis: Struggle for Recognition - Axel Honnet's Critical Theory
+- ⁜ Driyarkara Journal Coordinator in Chief & Head of Editors 2016-2017
+- ⁜ MaGis Community Coordinator 2016-2018 
+- ⁜ Hermanum College International Students Tutor
 """)
 
 # Professional Training Section
 st.write('\n')
 st.subheader("Professional Training & Certifications")
 st.write("""
-- 🏅 **Data Science with R Professional Certificate** – Harvard University
-- 🏅 **Data Science Professional Certificate** – IBM
-- 🏅 **Science and Technology Policy Course** – Massachusetts Institute of Technology
-- 🏅 **Project Management Professional Certificate** – University of Adelaide
-- 🏅 **French B2** - l’Institut Français d’Indonésie, Jakarta  
+- 🏅 **Data Science with R Professional Certificate** – Harvard University 
+- 🏅 **Data Science Professional Certificate** – IBM 
+- 🏅 **[Project Management Professional Certificate](https://credentials.edx.org/credentials/c7cad5d671ef48e48e9dbdee429acfa1/)** – University of Adelaide ([details](https://cloud.tsinghua.edu.cn/f/762e4ba360344e7682a0/?dl=1)) 
+- 🏅 **[Becoming an Entrepreneur](https://courses.edx.org/certificates/a36b3607414441198b9f3878d771a597)** – Massachusetts Institute of Technology
+- 🏅 **[Macroeconomics Professional Certificate](https://credentials.edx.org/credentials/b97f11b39f394159bbbcb6107ac66251/)** – University of Queensland ([details](https://cloud.tsinghua.edu.cn/f/b9b0da3770dd4fcfb4ad/?dl=1)) 
+- 🏅 **French B2** – l’Institut Français d’Indonésie, Jakarta
+""")
+
+# Academic Training Section
+st.write('\n')
+st.subheader("Theoretical Courses & Certifications")
+st.write("""
+- 📜 **Statistics: [Concepts](https://courses.edx.org/certificates/63fcb9b0112a437b94918250f1d303d8), [Methods](https://courses.edx.org/certificates/e217a3299de74a4aaf6bb0ff647ad2d4)** – London School of Economics
+- 📜 **[Policy for Science, Technology and Innovation](https://courses.edx.org/certificates/1d3502bd20184aa0988548efc9ed1203)** – MIT
+- 📜 **[Smart City](https://courses.edx.org/certificates/231973dc7a3a4d49bb2f65cc21b66061)** – World Bank
 """)
 
 # --- PROJECTS & ACCOMPLISHMENTS ---
@@ -306,23 +319,47 @@ st.write('\n')
 st.subheader("Projects & Accomplishments")
 st.write("---")
 PROJECTS = {
-    "Smart City Research": "https://example.com",
-    "AI Policy Analysis": "https://example.com"
+    "🏙️ Indonesia Public Services & Urban Development Research Database (in progress --please email for further information)": "https://example.com",
+    "🤖 Data & AI Policy Analysis (in progress --please email for further information)": "https://example.com"
 }
 
 for project, link in PROJECTS.items():
-    st.write(f"[{project}]({link})")
+    st.markdown(f"- [{project}]({link})")
 
 # --- ARTICLES & PUBLICATIONS ---
 st.write('\n')
 st.subheader("Articles & Publications")
 st.write("---")
+st.markdown('<p style="font-size: small;"><em>Note: writings published on Kompas platforms are attributed to the editor (as corporate policy requires), but the author\'s name appears at the end of the page under the title \'Contributor\'.</em></p>', unsafe_allow_html=True)
 
-ARTICLES = {
-    "The Future of Smart Cities: Harnessing AI for Public Policy": "https://example.com/article1",
-    "Data-Driven Decision Making in the Public Sector": "https://example.com/article2",
-    "The Impact of AI on Science-Technology Innovation Policy": "https://example.com/article3"
+# Data & AI Policy
+st.markdown("#### Data & AI Policy")
+ARTICLES_DATA_AI = {
+    "Efforts to Strengthen Personal Data Protection": "https://kompaspedia.kompas.id/baca/paparan-topik/upaya-memperkuat-perlindungan-data-pribadi",
+    "The Development of Artificial Intelligence and Its Impact": "https://kompaspedia.kompas.id/baca/paparan-topik/perkembangan-kecerdasan-buatan-dan-dampaknya"
 }
+for article, link in ARTICLES_DATA_AI.items():
+    st.markdown(f"- :page_facing_up: [{article}]({link})")
 
-for article, link in ARTICLES.items():
-    st.write(f"[{article}]({link})")
+# Science-Technology Innovation Policy & Industrial Policy
+st.markdown("#### Science-Technology Innovation Policy & Industrial Policy")
+ARTICLES_SCI_TECH = {
+    "Realizing the National Semiconductor Industry": "https://kompaspedia.kompas.id/baca/paparan-topik/membangkitkan-kembali-pariwisata-indonesia",
+    "The Development of Indonesia's Aluminum Industry": "https://kompaspedia.kompas.id/baca/paparan-topik/pengembangan-industri-aluminium-indonesia",
+    "History, Production, and Downstream Policy of Bauxite and Aluminum": "https://kompaspedia.kompas.id/baca/paparan-topik/sejarah-produksi-dan-kebijakan-hilirisasi-bauksit-dan-aluminium",
+    "Indonesia's Nickel Industry: History, Production, Policy, and Challenges": "https://kompaspedia.kompas.id/baca/paparan-topik/industri-nikel-indonesia-sejarah-produksi-kebijakan-dan-tantangan",
+    "Tin Mining: History, Production, and Tin Exports from Indonesia": "https://kompaspedia.kompas.id/baca/paparan-topik/pertambangan-timah-sejarah-produksi-dan-ekspor-timah-indonesia",
+    "The Development of the National Copper Industry": "https://kompaspedia.kompas.id/baca/paparan-topik/perkembangan-industri-tembaga-nasional",
+    "Efforts to Accelerate Technological Sovereignty": "https://kompaspedia.kompas.id/baca/paparan-topik/upaya-mempercepat-kedaulatan-teknologi"
+}
+for article, link in ARTICLES_SCI_TECH.items():
+    st.markdown(f"- :page_facing_up: [{article}]({link})")
+
+# Development & Climate Policy
+st.markdown("#### Development & Climate Policy")
+ARTICLES_CLIMATE_POLICY = {
+    "Carbon Trading Mechanism": "https://kompaspedia.kompas.id/baca/paparan-topik/mekanisme-perdagangan-karbon",
+    "The Ins and Outs of Carbon Trading in Indonesia": "https://kompaspedia.kompas.id/baca/paparan-topik/seluk-beluk-perdagangan-karbon-di-indonesia"
+}
+for article, link in ARTICLES_CLIMATE_POLICY.items():
+    st.markdown(f"- :page_facing_up: [{article}]({link})")
