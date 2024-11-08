@@ -253,7 +253,7 @@ st.markdown(f"""
 st.write("🇫🇲", "**Teacher | Xavier High School, Federated States of Micronesia**")
 st.write("08/2019 - 03/2020")
 st.write("""
-- ⁜ Teaching Ethics, Latin Language, French A1 and Chinese HSK 1-2
+- ⁜ Teaching Ethics, Latin Language, French A1 and Chinese HSK 1-2 (using English as language medium)
 - ⁜ Coordinating campus ministry and social service programs
 """)
 
@@ -274,16 +274,15 @@ st.write("""
 
 st.write('\n')
 st.write("🎓", "**Bachelor of Engineering**")
-st.write("Universitas Yuppentek Indonesia | 2022 - Present")
+st.write("Universitas Yuppentek Indonesia")
 st.write("""
 - ⁜ Major: Electrical Engineering
 - ⁜ GPA: 4.00 (4.00)
-- ⁜ Thesis: -
 """)
 
 st.write('\n')
 st.write("🎓", "**Bachelor of Arts**")
-st.write("Driyarkara School of Philosophy, Jakarta, Indonesia | 2015 - 2019")
+st.write("Driyarkara School of Philosophy, Jakarta, Indonesia")
 st.write("""
 - ⁜ Major: Philosophy
 - ⁜ GPA: 3.99 (4.00)
